@@ -1,0 +1,32 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.edatablock.rpa"
+    },
+    "jhipsterVersion": "5.3.4",
+    "applicationType": "monolith",
+    "baseName": "edatablockrpamain",
+    "packageName": "com.edatablock.rpa",
+    "packageFolder": "com/edatablock/rpa",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "YmQ5NjIyZWEwNWRkMzJlNGU0NzA0MjBjZmE4MjJlYTRkOTVmNTRjNDFiNGQzYTY4ZGVlZTZkYTgxMmI2YjFmODY2ZjIwNjE0YWNlZjc3NzcwODZlMDAzYTQ3NTFkYzAzZWJiODdhMDU3MGNkYTQyNGVlZGQ4ZjQ5MGNlZWFmMGM=",
+    "clientFramework": "react",
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "enableTranslation": false
+  }
+}
