@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <!--
+        Added the constraints for entity ClientDataOcr.
+    -->
+    <changeSet id="20181003153951-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="input_template_id"
+                                 baseTableName="client_data_ocr"
+                                 constraintName="fk_client_data_ocr_input_template_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="input_template"/>
+
+        <addForeignKeyConstraint baseColumnNames="transaction_id"
+                                 baseTableName="client_data_ocr"
+                                 constraintName="fk_client_data_ocr_transaction_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="transaction"/>
+
+    </changeSet>
+</databaseChangeLog>

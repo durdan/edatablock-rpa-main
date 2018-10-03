@@ -1,0 +1,50 @@
+{
+    "name": "ClientDataOcr",
+    "fields": [
+        {
+            "fieldName": "emailMessageId",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "extractOcrDataJson",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "searchId",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "clientEmailAddress",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "attachmentfileName",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "inputTemplate",
+            "otherEntityName": "inputTemplate",
+            "otherEntityField": "templateName",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "clientDataOcr"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "transaction",
+            "otherEntityName": "transaction",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20181003153951",
+    "entityTableName": "client_data_ocr",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

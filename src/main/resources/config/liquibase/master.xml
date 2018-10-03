@@ -5,6 +5,29 @@
     xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
 
     <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181003153940_added_entity_Organization.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181003153941_added_entity_OrgEmailConfig.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181003153942_added_entity_Client.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181003153943_added_entity_ClientEmailDomain.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181003153944_added_entity_InputTemplate.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181003153945_added_entity_TemplateFields.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181003153946_added_entity_EmailMessages.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181003153947_added_entity_EmailAttachment.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181003153948_added_entity_UploadFiles.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181003153949_added_entity_Transaction.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181003153950_added_entity_ErrorInProcessing.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181003153951_added_entity_ClientDataOcr.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181003153952_added_entity_FileToFtp.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="config/liquibase/changelog/20181003153941_added_entity_constraints_OrgEmailConfig.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181003153942_added_entity_constraints_Client.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181003153943_added_entity_constraints_ClientEmailDomain.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181003153944_added_entity_constraints_InputTemplate.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181003153945_added_entity_constraints_TemplateFields.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181003153946_added_entity_constraints_EmailMessages.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181003153947_added_entity_constraints_EmailAttachment.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181003153948_added_entity_constraints_UploadFiles.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181003153951_added_entity_constraints_ClientDataOcr.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181003153952_added_entity_constraints_FileToFtp.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
 </databaseChangeLog>

@@ -1,0 +1,43 @@
+{
+    "name": "ErrorInProcessing",
+    "fields": [
+        {
+            "fieldName": "errorCode",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "processType",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "createDate",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "exception",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "processBy",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "processID",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20181003153950",
+    "entityTableName": "error_in_processing",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}
