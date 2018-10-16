@@ -57,15 +57,15 @@ export class InputTemplateDetail extends React.Component<IInputTemplateDetailPro
               <TextFormat value={inputTemplateEntity.updateDate} type="date" format={APP_DATE_FORMAT} />
             </dd>
             <dt>
-              <span id="templateIdenfier">Template Idenfier</span>
+              <span id="templateIdentifier">Template Identifier</span>
             </dt>
-            <dd>{inputTemplateEntity.templateIdenfier}</dd>
+            <dd>{inputTemplateEntity.templateIdentifier}</dd>
             <dt>
               <span id="updatedBy">Updated By</span>
             </dt>
             <dd>{inputTemplateEntity.updatedBy}</dd>
             <dt>Client</dt>
-            <dd>{inputTemplateEntity.clientClientEmailAddress ? inputTemplateEntity.clientClientEmailAddress : ''}</dd>
+            <dd>{inputTemplateEntity.clientClientName ? inputTemplateEntity.clientClientName : ''}</dd>
           </dl>
           <Button tag={Link} to="/entity/input-template" replace color="info">
             <FontAwesomeIcon icon="arrow-left" /> <span className="d-none d-md-inline">Back</span>

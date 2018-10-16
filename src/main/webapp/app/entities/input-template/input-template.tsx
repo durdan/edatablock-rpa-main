@@ -83,8 +83,8 @@ export class InputTemplate extends React.Component<IInputTemplateProps, IInputTe
                 <th className="hand" onClick={this.sort('updateDate')}>
                   Update Date <FontAwesomeIcon icon="sort" />
                 </th>
-                <th className="hand" onClick={this.sort('templateIdenfier')}>
-                  Template Idenfier <FontAwesomeIcon icon="sort" />
+                <th className="hand" onClick={this.sort('templateIdentifier')}>
+                  Template Identifier <FontAwesomeIcon icon="sort" />
                 </th>
                 <th className="hand" onClick={this.sort('updatedBy')}>
                   Updated By <FontAwesomeIcon icon="sort" />
@@ -113,11 +113,11 @@ export class InputTemplate extends React.Component<IInputTemplateProps, IInputTe
                   <td>
                     <TextFormat type="date" value={inputTemplate.updateDate} format={APP_DATE_FORMAT} />
                   </td>
-                  <td>{inputTemplate.templateIdenfier}</td>
+                  <td>{inputTemplate.templateIdentifier}</td>
                   <td>{inputTemplate.updatedBy}</td>
                   <td>
-                    {inputTemplate.clientClientEmailAddress ? (
-                      <Link to={`client/${inputTemplate.clientId}`}>{inputTemplate.clientClientEmailAddress}</Link>
+                    {inputTemplate.clientClientName ? (
+                      <Link to={`client/${inputTemplate.clientId}`}>{inputTemplate.clientClientName}</Link>
                     ) : (
                       ''
                     )}

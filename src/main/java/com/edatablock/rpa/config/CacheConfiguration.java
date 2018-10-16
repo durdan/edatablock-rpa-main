@@ -54,6 +54,7 @@ public class CacheConfiguration {
             cm.createCache(com.edatablock.rpa.domain.ErrorInProcessing.class.getName(), jcacheConfiguration);
             cm.createCache(com.edatablock.rpa.domain.ClientDataOcr.class.getName(), jcacheConfiguration);
             cm.createCache(com.edatablock.rpa.domain.FileToFtp.class.getName(), jcacheConfiguration);
+            cm.createCache(com.edatablock.rpa.domain.TemplateRules.class.getName(), jcacheConfiguration);
             // jhipster-needle-ehcache-add-entry
         };
     }

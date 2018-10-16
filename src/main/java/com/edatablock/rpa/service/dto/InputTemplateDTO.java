@@ -25,13 +25,13 @@ public class InputTemplateDTO implements Serializable {
 
     private Instant updateDate;
 
-    private String templateIdenfier;
+    private String templateIdentifier;
 
     private String updatedBy;
 
     private Long clientId;
 
-    private String clientClientEmailAddress;
+    private String clientClientName;
 
     public Long getId() {
         return id;
@@ -89,12 +89,12 @@ public class InputTemplateDTO implements Serializable {
         this.updateDate = updateDate;
     }
 
-    public String getTemplateIdenfier() {
-        return templateIdenfier;
+    public String getTemplateIdentifier() {
+        return templateIdentifier;
     }
 
-    public void setTemplateIdenfier(String templateIdenfier) {
-        this.templateIdenfier = templateIdenfier;
+    public void setTemplateIdentifier(String templateIdentifier) {
+        this.templateIdentifier = templateIdentifier;
     }
 
     public String getUpdatedBy() {
@@ -113,12 +113,12 @@ public class InputTemplateDTO implements Serializable {
         this.clientId = clientId;
     }
 
-    public String getClientClientEmailAddress() {
-        return clientClientEmailAddress;
+    public String getClientClientName() {
+        return clientClientName;
     }
 
-    public void setClientClientEmailAddress(String clientClientEmailAddress) {
-        this.clientClientEmailAddress = clientClientEmailAddress;
+    public void setClientClientName(String clientClientName) {
+        this.clientClientName = clientClientName;
     }
 
     @Override
@@ -152,10 +152,10 @@ public class InputTemplateDTO implements Serializable {
             ", createDate='" + getCreateDate() + "'" +
             ", createdBy='" + getCreatedBy() + "'" +
             ", updateDate='" + getUpdateDate() + "'" +
-            ", templateIdenfier='" + getTemplateIdenfier() + "'" +
+            ", templateIdentifier='" + getTemplateIdentifier() + "'" +
             ", updatedBy='" + getUpdatedBy() + "'" +
             ", client=" + getClientId() +
-            ", client='" + getClientClientEmailAddress() + "'" +
+            ", client='" + getClientClientName() + "'" +
             "}";
     }
 }

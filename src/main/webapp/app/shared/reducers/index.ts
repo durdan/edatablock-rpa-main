@@ -63,6 +63,10 @@ import clientDataOcr, {
 import fileToFtp, {
   FileToFtpState
 } from 'app/entities/file-to-ftp/file-to-ftp.reducer';
+// prettier-ignore
+import templateRules, {
+  TemplateRulesState
+} from 'app/entities/template-rules/template-rules.reducer';
 /* jhipster-needle-add-reducer-import - JHipster will add reducer here */
 
 export interface IRootState {
@@ -88,6 +92,7 @@ export interface IRootState {
   readonly errorInProcessing: ErrorInProcessingState;
   readonly clientDataOcr: ClientDataOcrState;
   readonly fileToFtp: FileToFtpState;
+  readonly templateRules: TemplateRulesState;
   /* jhipster-needle-add-reducer-type - JHipster will add reducer type here */
   readonly loadingBar: any;
 }
@@ -115,6 +120,7 @@ const rootReducer = combineReducers<IRootState>({
   errorInProcessing,
   clientDataOcr,
   fileToFtp,
+  templateRules,
   /* jhipster-needle-add-reducer-combine - JHipster will add reducer here */
   loadingBar
 });

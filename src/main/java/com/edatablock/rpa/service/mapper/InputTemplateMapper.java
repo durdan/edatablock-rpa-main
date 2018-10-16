@@ -12,7 +12,7 @@ import org.mapstruct.*;
 public interface InputTemplateMapper extends EntityMapper<InputTemplateDTO, InputTemplate> {
 
     @Mapping(source = "client.id", target = "clientId")
-    @Mapping(source = "client.clientEmailAddress", target = "clientClientEmailAddress")
+    @Mapping(source = "client.clientName", target = "clientClientName")
     InputTemplateDTO toDto(InputTemplate inputTemplate);
 
     @Mapping(source = "clientId", target = "client")

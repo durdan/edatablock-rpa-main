@@ -8,9 +8,9 @@ export interface IInputTemplate {
   createDate?: Moment;
   createdBy?: string;
   updateDate?: Moment;
-  templateIdenfier?: string;
+  templateIdentifier?: string;
   updatedBy?: string;
-  clientClientEmailAddress?: string;
+  clientClientName?: string;
   clientId?: number;
 }
 

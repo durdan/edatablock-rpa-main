@@ -62,8 +62,8 @@ public class InputTemplateResourceIntTest {
     private static final Instant DEFAULT_UPDATE_DATE = Instant.ofEpochMilli(0L);
     private static final Instant UPDATED_UPDATE_DATE = Instant.now().truncatedTo(ChronoUnit.MILLIS);
 
-    private static final String DEFAULT_TEMPLATE_IDENFIER = "AAAAAAAAAA";
-    private static final String UPDATED_TEMPLATE_IDENFIER = "BBBBBBBBBB";
+    private static final String DEFAULT_TEMPLATE_IDENTIFIER = "AAAAAAAAAA";
+    private static final String UPDATED_TEMPLATE_IDENTIFIER = "BBBBBBBBBB";
 
     private static final String DEFAULT_UPDATED_BY = "AAAAAAAAAA";
     private static final String UPDATED_UPDATED_BY = "BBBBBBBBBB";
@@ -118,7 +118,7 @@ public class InputTemplateResourceIntTest {
             .createDate(DEFAULT_CREATE_DATE)
             .createdBy(DEFAULT_CREATED_BY)
             .updateDate(DEFAULT_UPDATE_DATE)
-            .templateIdenfier(DEFAULT_TEMPLATE_IDENFIER)
+            .templateIdentifier(DEFAULT_TEMPLATE_IDENTIFIER)
             .updatedBy(DEFAULT_UPDATED_BY);
         return inputTemplate;
     }
@@ -150,7 +150,7 @@ public class InputTemplateResourceIntTest {
         assertThat(testInputTemplate.getCreateDate()).isEqualTo(DEFAULT_CREATE_DATE);
         assertThat(testInputTemplate.getCreatedBy()).isEqualTo(DEFAULT_CREATED_BY);
         assertThat(testInputTemplate.getUpdateDate()).isEqualTo(DEFAULT_UPDATE_DATE);
-        assertThat(testInputTemplate.getTemplateIdenfier()).isEqualTo(DEFAULT_TEMPLATE_IDENFIER);
+        assertThat(testInputTemplate.getTemplateIdentifier()).isEqualTo(DEFAULT_TEMPLATE_IDENTIFIER);
         assertThat(testInputTemplate.getUpdatedBy()).isEqualTo(DEFAULT_UPDATED_BY);
     }
 
@@ -210,7 +210,7 @@ public class InputTemplateResourceIntTest {
             .andExpect(jsonPath("$.[*].createDate").value(hasItem(DEFAULT_CREATE_DATE.toString())))
             .andExpect(jsonPath("$.[*].createdBy").value(hasItem(DEFAULT_CREATED_BY.toString())))
             .andExpect(jsonPath("$.[*].updateDate").value(hasItem(DEFAULT_UPDATE_DATE.toString())))
-            .andExpect(jsonPath("$.[*].templateIdenfier").value(hasItem(DEFAULT_TEMPLATE_IDENFIER.toString())))
+            .andExpect(jsonPath("$.[*].templateIdentifier").value(hasItem(DEFAULT_TEMPLATE_IDENTIFIER.toString())))
             .andExpect(jsonPath("$.[*].updatedBy").value(hasItem(DEFAULT_UPDATED_BY.toString())));
     }
     
@@ -231,7 +231,7 @@ public class InputTemplateResourceIntTest {
             .andExpect(jsonPath("$.createDate").value(DEFAULT_CREATE_DATE.toString()))
             .andExpect(jsonPath("$.createdBy").value(DEFAULT_CREATED_BY.toString()))
             .andExpect(jsonPath("$.updateDate").value(DEFAULT_UPDATE_DATE.toString()))
-            .andExpect(jsonPath("$.templateIdenfier").value(DEFAULT_TEMPLATE_IDENFIER.toString()))
+            .andExpect(jsonPath("$.templateIdentifier").value(DEFAULT_TEMPLATE_IDENTIFIER.toString()))
             .andExpect(jsonPath("$.updatedBy").value(DEFAULT_UPDATED_BY.toString()));
     }
 
@@ -262,7 +262,7 @@ public class InputTemplateResourceIntTest {
             .createDate(UPDATED_CREATE_DATE)
             .createdBy(UPDATED_CREATED_BY)
             .updateDate(UPDATED_UPDATE_DATE)
-            .templateIdenfier(UPDATED_TEMPLATE_IDENFIER)
+            .templateIdentifier(UPDATED_TEMPLATE_IDENTIFIER)
             .updatedBy(UPDATED_UPDATED_BY);
         InputTemplateDTO inputTemplateDTO = inputTemplateMapper.toDto(updatedInputTemplate);
 
@@ -281,7 +281,7 @@ public class InputTemplateResourceIntTest {
         assertThat(testInputTemplate.getCreateDate()).isEqualTo(UPDATED_CREATE_DATE);
         assertThat(testInputTemplate.getCreatedBy()).isEqualTo(UPDATED_CREATED_BY);
         assertThat(testInputTemplate.getUpdateDate()).isEqualTo(UPDATED_UPDATE_DATE);
-        assertThat(testInputTemplate.getTemplateIdenfier()).isEqualTo(UPDATED_TEMPLATE_IDENFIER);
+        assertThat(testInputTemplate.getTemplateIdentifier()).isEqualTo(UPDATED_TEMPLATE_IDENTIFIER);
         assertThat(testInputTemplate.getUpdatedBy()).isEqualTo(UPDATED_UPDATED_BY);
     }
 

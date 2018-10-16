@@ -17,6 +17,7 @@ import Transaction from './transaction';
 import ErrorInProcessing from './error-in-processing';
 import ClientDataOcr from './client-data-ocr';
 import FileToFtp from './file-to-ftp';
+import TemplateRules from './template-rules';
 /* jhipster-needle-add-route-import - JHipster will add routes here */
 
 const Routes = ({ match }) => (
@@ -36,6 +37,7 @@ const Routes = ({ match }) => (
       <ErrorBoundaryRoute path={`${match.url}/error-in-processing`} component={ErrorInProcessing} />
       <ErrorBoundaryRoute path={`${match.url}/client-data-ocr`} component={ClientDataOcr} />
       <ErrorBoundaryRoute path={`${match.url}/file-to-ftp`} component={FileToFtp} />
+      <ErrorBoundaryRoute path={`${match.url}/template-rules`} component={TemplateRules} />
       {/* jhipster-needle-add-route-path - JHipster will routes here */}
     </Switch>
   </div>

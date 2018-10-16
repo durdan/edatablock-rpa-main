@@ -18,6 +18,7 @@
     <include file="config/liquibase/changelog/20181003153950_added_entity_ErrorInProcessing.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20181003153951_added_entity_ClientDataOcr.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20181003153952_added_entity_FileToFtp.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181016210131_added_entity_TemplateRules.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
     <include file="config/liquibase/changelog/20181003153941_added_entity_constraints_OrgEmailConfig.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20181003153942_added_entity_constraints_Client.xml" relativeToChangelogFile="false"/>
@@ -29,5 +30,6 @@
     <include file="config/liquibase/changelog/20181003153948_added_entity_constraints_UploadFiles.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20181003153951_added_entity_constraints_ClientDataOcr.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20181003153952_added_entity_constraints_FileToFtp.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181016210131_added_entity_constraints_TemplateRules.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
 </databaseChangeLog>

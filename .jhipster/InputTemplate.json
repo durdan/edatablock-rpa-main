@@ -29,7 +29,7 @@
             "fieldType": "Instant"
         },
         {
-            "fieldName": "templateIdenfier",
+            "fieldName": "templateIdentifier",
             "fieldType": "String"
         },
         {
@@ -42,7 +42,7 @@
             "relationshipType": "many-to-one",
             "relationshipName": "client",
             "otherEntityName": "client",
-            "otherEntityField": "clientEmailAddress"
+            "otherEntityField": "clientName"
         }
     ],
     "changelogDate": "20181003153944",

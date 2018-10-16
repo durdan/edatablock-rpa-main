@@ -145,10 +145,10 @@ export class InputTemplateUpdate extends React.Component<IInputTemplateUpdatePro
                   />
                 </AvGroup>
                 <AvGroup>
-                  <Label id="templateIdenfierLabel" for="templateIdenfier">
-                    Template Idenfier
+                  <Label id="templateIdentifierLabel" for="templateIdentifier">
+                    Template Identifier
                   </Label>
-                  <AvField id="input-template-templateIdenfier" type="text" name="templateIdenfier" />
+                  <AvField id="input-template-templateIdentifier" type="text" name="templateIdentifier" />
                 </AvGroup>
                 <AvGroup>
                   <Label id="updatedByLabel" for="updatedBy">
@@ -157,13 +157,13 @@ export class InputTemplateUpdate extends React.Component<IInputTemplateUpdatePro
                   <AvField id="input-template-updatedBy" type="text" name="updatedBy" />
                 </AvGroup>
                 <AvGroup>
-                  <Label for="client.clientEmailAddress">Client</Label>
+                  <Label for="client.clientName">Client</Label>
                   <AvInput id="input-template-client" type="select" className="form-control" name="clientId">
                     <option value="" key="0" />
                     {clients
                       ? clients.map(otherEntity => (
                           <option value={otherEntity.id} key={otherEntity.id}>
-                            {otherEntity.clientEmailAddress}
+                            {otherEntity.clientName}
                           </option>
                         ))
                       : null}

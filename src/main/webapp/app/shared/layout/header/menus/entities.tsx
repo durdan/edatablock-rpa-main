@@ -47,6 +47,9 @@ export const EntitiesMenu = props => (
     <DropdownItem tag={Link} to="/entity/file-to-ftp">
       <FontAwesomeIcon icon="asterisk" />&nbsp;File To Ftp
     </DropdownItem>
+    <DropdownItem tag={Link} to="/entity/template-rules">
+      <FontAwesomeIcon icon="asterisk" />&nbsp;Template Rules
+    </DropdownItem>
     {/* jhipster-needle-add-entity-to-menu - JHipster will add entities to the menu here */}
   </NavDropdown>
 );

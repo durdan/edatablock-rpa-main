@@ -49,8 +49,18 @@ entity InputTemplate {
     createDate Instant,
     createdBy String,
     updateDate Instant,
-    templateIdenfier String,//regex string
+    templateIdentifier String,//regex string
     updatedBy String
+}
+
+entity TemplateRules{
+	ruleSequence Integer,
+    lookupPlace String, // Email Body,Email Subject etc
+	operator String,//equals OR >< contains
+    value String,
+    joinField String //OR,AND
+    description String
+
 }
 
 
@@ -119,7 +129,7 @@ entity Transaction {
 }
 
 entity ErrorInProcessing{
-	
+
 //CLIENT_ID	NUMBER
 errorCode	String,
 description	String,
@@ -160,7 +170,7 @@ entity FileToFtp {
 	OrgEmailConfig{orgName(orgName)} to Organization
     Client{orgName(orgName)} to Organization
     ClientEmailDomain{client(clientName)} to Client
-    InputTemplate{client(clientEmailAddress)} to Client{inputTemplate(templateName)}
+    InputTemplate{client(clientName)} to Client{inputTemplate(templateName)}
     TemplateFields{inputTemplate(templateName)} to InputTemplate
     EmailMessages{client(clientEmailAddress)} to Client
     UploadFiles{client(clientName)} to Client
@@ -171,10 +181,12 @@ entity FileToFtp {
 
 relationship OneToMany {
 EmailMessages{emailAttachment(fileName)} to EmailAttachment{emailMessages(messageId)}
+
 }
 
 relationship OneToOne {
 ClientDataOcr{inputTemplate(templateName)} to InputTemplate
+TemplateRules{inputTemplate(templateName)} to InputTemplate
 
 }
 

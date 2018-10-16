@@ -44,8 +44,8 @@ public class InputTemplate implements Serializable {
     @Column(name = "update_date")
     private Instant updateDate;
 
-    @Column(name = "template_idenfier")
-    private String templateIdenfier;
+    @Column(name = "template_identifier")
+    private String templateIdentifier;
 
     @Column(name = "updated_by")
     private String updatedBy;
@@ -141,17 +141,17 @@ public class InputTemplate implements Serializable {
         this.updateDate = updateDate;
     }
 
-    public String getTemplateIdenfier() {
-        return templateIdenfier;
+    public String getTemplateIdentifier() {
+        return templateIdentifier;
     }
 
-    public InputTemplate templateIdenfier(String templateIdenfier) {
-        this.templateIdenfier = templateIdenfier;
+    public InputTemplate templateIdentifier(String templateIdentifier) {
+        this.templateIdentifier = templateIdentifier;
         return this;
     }
 
-    public void setTemplateIdenfier(String templateIdenfier) {
-        this.templateIdenfier = templateIdenfier;
+    public void setTemplateIdentifier(String templateIdentifier) {
+        this.templateIdentifier = templateIdentifier;
     }
 
     public String getUpdatedBy() {
@@ -211,7 +211,7 @@ public class InputTemplate implements Serializable {
             ", createDate='" + getCreateDate() + "'" +
             ", createdBy='" + getCreatedBy() + "'" +
             ", updateDate='" + getUpdateDate() + "'" +
-            ", templateIdenfier='" + getTemplateIdenfier() + "'" +
+            ", templateIdentifier='" + getTemplateIdentifier() + "'" +
             ", updatedBy='" + getUpdatedBy() + "'" +
             "}";
     }
