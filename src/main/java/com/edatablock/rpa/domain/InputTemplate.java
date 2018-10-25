@@ -47,6 +47,9 @@ public class InputTemplate implements Serializable {
     @Column(name = "template_identifier")
     private String templateIdentifier;
 
+    @Column(name = "number_of_pages")
+    private Integer numberOfPages;
+
     @Column(name = "updated_by")
     private String updatedBy;
 
@@ -154,6 +157,19 @@ public class InputTemplate implements Serializable {
         this.templateIdentifier = templateIdentifier;
     }
 
+    public Integer getNumberOfPages() {
+        return numberOfPages;
+    }
+
+    public InputTemplate numberOfPages(Integer numberOfPages) {
+        this.numberOfPages = numberOfPages;
+        return this;
+    }
+
+    public void setNumberOfPages(Integer numberOfPages) {
+        this.numberOfPages = numberOfPages;
+    }
+
     public String getUpdatedBy() {
         return updatedBy;
     }
@@ -212,6 +228,7 @@ public class InputTemplate implements Serializable {
             ", createdBy='" + getCreatedBy() + "'" +
             ", updateDate='" + getUpdateDate() + "'" +
             ", templateIdentifier='" + getTemplateIdentifier() + "'" +
+            ", numberOfPages=" + getNumberOfPages() +
             ", updatedBy='" + getUpdatedBy() + "'" +
             "}";
     }

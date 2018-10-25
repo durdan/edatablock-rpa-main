@@ -54,6 +54,9 @@ public class Client implements Serializable {
     @Column(name = "update_date")
     private Instant updateDate;
 
+    @Column(name = "is_merged_document")
+    private Integer isMergedDocument;
+
     @Column(name = "updated_by")
     private String updatedBy;
 
@@ -178,6 +181,19 @@ public class Client implements Serializable {
         this.updateDate = updateDate;
     }
 
+    public Integer getIsMergedDocument() {
+        return isMergedDocument;
+    }
+
+    public Client isMergedDocument(Integer isMergedDocument) {
+        this.isMergedDocument = isMergedDocument;
+        return this;
+    }
+
+    public void setIsMergedDocument(Integer isMergedDocument) {
+        this.isMergedDocument = isMergedDocument;
+    }
+
     public String getUpdatedBy() {
         return updatedBy;
     }
@@ -262,6 +278,7 @@ public class Client implements Serializable {
             ", createDate='" + getCreateDate() + "'" +
             ", createdBy='" + getCreatedBy() + "'" +
             ", updateDate='" + getUpdateDate() + "'" +
+            ", isMergedDocument=" + getIsMergedDocument() +
             ", updatedBy='" + getUpdatedBy() + "'" +
             "}";
     }

@@ -68,6 +68,9 @@ public class ClientResourceIntTest {
     private static final Instant DEFAULT_UPDATE_DATE = Instant.ofEpochMilli(0L);
     private static final Instant UPDATED_UPDATE_DATE = Instant.now().truncatedTo(ChronoUnit.MILLIS);
 
+    private static final Integer DEFAULT_IS_MERGED_DOCUMENT = 1;
+    private static final Integer UPDATED_IS_MERGED_DOCUMENT = 2;
+
     private static final String DEFAULT_UPDATED_BY = "AAAAAAAAAA";
     private static final String UPDATED_UPDATED_BY = "BBBBBBBBBB";
 
@@ -123,6 +126,7 @@ public class ClientResourceIntTest {
             .createDate(DEFAULT_CREATE_DATE)
             .createdBy(DEFAULT_CREATED_BY)
             .updateDate(DEFAULT_UPDATE_DATE)
+            .isMergedDocument(DEFAULT_IS_MERGED_DOCUMENT)
             .updatedBy(DEFAULT_UPDATED_BY);
         return client;
     }
@@ -156,6 +160,7 @@ public class ClientResourceIntTest {
         assertThat(testClient.getCreateDate()).isEqualTo(DEFAULT_CREATE_DATE);
         assertThat(testClient.getCreatedBy()).isEqualTo(DEFAULT_CREATED_BY);
         assertThat(testClient.getUpdateDate()).isEqualTo(DEFAULT_UPDATE_DATE);
+        assertThat(testClient.getIsMergedDocument()).isEqualTo(DEFAULT_IS_MERGED_DOCUMENT);
         assertThat(testClient.getUpdatedBy()).isEqualTo(DEFAULT_UPDATED_BY);
     }
 
@@ -236,6 +241,7 @@ public class ClientResourceIntTest {
             .andExpect(jsonPath("$.[*].createDate").value(hasItem(DEFAULT_CREATE_DATE.toString())))
             .andExpect(jsonPath("$.[*].createdBy").value(hasItem(DEFAULT_CREATED_BY.toString())))
             .andExpect(jsonPath("$.[*].updateDate").value(hasItem(DEFAULT_UPDATE_DATE.toString())))
+            .andExpect(jsonPath("$.[*].isMergedDocument").value(hasItem(DEFAULT_IS_MERGED_DOCUMENT)))
             .andExpect(jsonPath("$.[*].updatedBy").value(hasItem(DEFAULT_UPDATED_BY.toString())));
     }
     
@@ -258,6 +264,7 @@ public class ClientResourceIntTest {
             .andExpect(jsonPath("$.createDate").value(DEFAULT_CREATE_DATE.toString()))
             .andExpect(jsonPath("$.createdBy").value(DEFAULT_CREATED_BY.toString()))
             .andExpect(jsonPath("$.updateDate").value(DEFAULT_UPDATE_DATE.toString()))
+            .andExpect(jsonPath("$.isMergedDocument").value(DEFAULT_IS_MERGED_DOCUMENT))
             .andExpect(jsonPath("$.updatedBy").value(DEFAULT_UPDATED_BY.toString()));
     }
 
@@ -290,6 +297,7 @@ public class ClientResourceIntTest {
             .createDate(UPDATED_CREATE_DATE)
             .createdBy(UPDATED_CREATED_BY)
             .updateDate(UPDATED_UPDATE_DATE)
+            .isMergedDocument(UPDATED_IS_MERGED_DOCUMENT)
             .updatedBy(UPDATED_UPDATED_BY);
         ClientDTO clientDTO = clientMapper.toDto(updatedClient);
 
@@ -310,6 +318,7 @@ public class ClientResourceIntTest {
         assertThat(testClient.getCreateDate()).isEqualTo(UPDATED_CREATE_DATE);
         assertThat(testClient.getCreatedBy()).isEqualTo(UPDATED_CREATED_BY);
         assertThat(testClient.getUpdateDate()).isEqualTo(UPDATED_UPDATE_DATE);
+        assertThat(testClient.getIsMergedDocument()).isEqualTo(UPDATED_IS_MERGED_DOCUMENT);
         assertThat(testClient.getUpdatedBy()).isEqualTo(UPDATED_UPDATED_BY);
     }
 

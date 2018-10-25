@@ -50,6 +50,10 @@
                 <constraints nullable="true" />
             </column>
 
+            <column name="number_of_pages" type="integer">
+                <constraints nullable="true" />
+            </column>
+
             <column name="updated_by" type="varchar(255)">
                 <constraints nullable="true" />
             </column>

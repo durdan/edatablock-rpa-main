@@ -34,6 +34,10 @@ public class TemplateFieldsDTO implements Serializable {
 
     private Integer isTemplateIdentifier;
 
+    private Integer isLabel;
+
+    private Integer pageNumebr;
+
     private Integer fieldValidationRequire;
 
     private String fieldValidationRule;
@@ -122,6 +126,22 @@ public class TemplateFieldsDTO implements Serializable {
         this.isTemplateIdentifier = isTemplateIdentifier;
     }
 
+    public Integer getIsLabel() {
+        return isLabel;
+    }
+
+    public void setIsLabel(Integer isLabel) {
+        this.isLabel = isLabel;
+    }
+
+    public Integer getPageNumebr() {
+        return pageNumebr;
+    }
+
+    public void setPageNumebr(Integer pageNumebr) {
+        this.pageNumebr = pageNumebr;
+    }
+
     public Integer getFieldValidationRequire() {
         return fieldValidationRequire;
     }
@@ -188,6 +208,8 @@ public class TemplateFieldsDTO implements Serializable {
             ", height=" + getHeight() +
             ", sequence=" + getSequence() +
             ", isTemplateIdentifier=" + getIsTemplateIdentifier() +
+            ", isLabel=" + getIsLabel() +
+            ", pageNumebr=" + getPageNumebr() +
             ", fieldValidationRequire=" + getFieldValidationRequire() +
             ", fieldValidationRule='" + getFieldValidationRule() + "'" +
             ", inputTemplate=" + getInputTemplateId() +

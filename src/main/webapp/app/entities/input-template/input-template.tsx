@@ -86,6 +86,9 @@ export class InputTemplate extends React.Component<IInputTemplateProps, IInputTe
                 <th className="hand" onClick={this.sort('templateIdentifier')}>
                   Template Identifier <FontAwesomeIcon icon="sort" />
                 </th>
+                <th className="hand" onClick={this.sort('numberOfPages')}>
+                  Number Of Pages <FontAwesomeIcon icon="sort" />
+                </th>
                 <th className="hand" onClick={this.sort('updatedBy')}>
                   Updated By <FontAwesomeIcon icon="sort" />
                 </th>
@@ -114,6 +117,7 @@ export class InputTemplate extends React.Component<IInputTemplateProps, IInputTe
                     <TextFormat type="date" value={inputTemplate.updateDate} format={APP_DATE_FORMAT} />
                   </td>
                   <td>{inputTemplate.templateIdentifier}</td>
+                  <td>{inputTemplate.numberOfPages}</td>
                   <td>{inputTemplate.updatedBy}</td>
                   <td>
                     {inputTemplate.clientClientName ? (

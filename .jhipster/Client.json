@@ -40,6 +40,10 @@
             "fieldType": "Instant"
         },
         {
+            "fieldName": "isMergedDocument",
+            "fieldType": "Integer"
+        },
+        {
             "fieldName": "updatedBy",
             "fieldType": "String"
         }

@@ -86,6 +86,9 @@ export class TemplateRules extends React.Component<ITemplateRulesProps, ITemplat
                 <th>
                   Input Template <FontAwesomeIcon icon="sort" />
                 </th>
+                <th>
+                  Client <FontAwesomeIcon icon="sort" />
+                </th>
                 <th />
               </tr>
             </thead>
@@ -106,6 +109,13 @@ export class TemplateRules extends React.Component<ITemplateRulesProps, ITemplat
                   <td>
                     {templateRules.inputTemplateTemplateName ? (
                       <Link to={`input-template/${templateRules.inputTemplateId}`}>{templateRules.inputTemplateTemplateName}</Link>
+                    ) : (
+                      ''
+                    )}
+                  </td>
+                  <td>
+                    {templateRules.clientClientName ? (
+                      <Link to={`client/${templateRules.clientId}`}>{templateRules.clientClientName}</Link>
                     ) : (
                       ''
                     )}

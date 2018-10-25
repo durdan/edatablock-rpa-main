@@ -56,6 +56,12 @@ public class TemplateFields implements Serializable {
     @Column(name = "is_template_identifier")
     private Integer isTemplateIdentifier;
 
+    @Column(name = "is_label")
+    private Integer isLabel;
+
+    @Column(name = "page_numebr")
+    private Integer pageNumebr;
+
     @Column(name = "field_validation_require")
     private Integer fieldValidationRequire;
 
@@ -192,6 +198,32 @@ public class TemplateFields implements Serializable {
         this.isTemplateIdentifier = isTemplateIdentifier;
     }
 
+    public Integer getIsLabel() {
+        return isLabel;
+    }
+
+    public TemplateFields isLabel(Integer isLabel) {
+        this.isLabel = isLabel;
+        return this;
+    }
+
+    public void setIsLabel(Integer isLabel) {
+        this.isLabel = isLabel;
+    }
+
+    public Integer getPageNumebr() {
+        return pageNumebr;
+    }
+
+    public TemplateFields pageNumebr(Integer pageNumebr) {
+        this.pageNumebr = pageNumebr;
+        return this;
+    }
+
+    public void setPageNumebr(Integer pageNumebr) {
+        this.pageNumebr = pageNumebr;
+    }
+
     public Integer getFieldValidationRequire() {
         return fieldValidationRequire;
     }
@@ -265,6 +297,8 @@ public class TemplateFields implements Serializable {
             ", height=" + getHeight() +
             ", sequence=" + getSequence() +
             ", isTemplateIdentifier=" + getIsTemplateIdentifier() +
+            ", isLabel=" + getIsLabel() +
+            ", pageNumebr=" + getPageNumebr() +
             ", fieldValidationRequire=" + getFieldValidationRequire() +
             ", fieldValidationRule='" + getFieldValidationRule() + "'" +
             "}";

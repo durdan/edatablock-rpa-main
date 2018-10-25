@@ -9,6 +9,8 @@ export interface ITemplateFields {
   height?: number;
   sequence?: number;
   isTemplateIdentifier?: number;
+  isLabel?: number;
+  pageNumebr?: number;
   fieldValidationRequire?: number;
   fieldValidationRule?: string;
   inputTemplateTemplateName?: string;

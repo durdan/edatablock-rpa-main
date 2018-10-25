@@ -65,6 +65,10 @@ export class ClientDetail extends React.Component<IClientDetailProps> {
               <TextFormat value={clientEntity.updateDate} type="date" format={APP_DATE_FORMAT} />
             </dd>
             <dt>
+              <span id="isMergedDocument">Is Merged Document</span>
+            </dt>
+            <dd>{clientEntity.isMergedDocument}</dd>
+            <dt>
               <span id="updatedBy">Updated By</span>
             </dt>
             <dd>{clientEntity.updatedBy}</dd>

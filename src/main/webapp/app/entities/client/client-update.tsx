@@ -164,6 +164,12 @@ export class ClientUpdate extends React.Component<IClientUpdateProps, IClientUpd
                   />
                 </AvGroup>
                 <AvGroup>
+                  <Label id="isMergedDocumentLabel" for="isMergedDocument">
+                    Is Merged Document
+                  </Label>
+                  <AvField id="client-isMergedDocument" type="string" className="form-control" name="isMergedDocument" />
+                </AvGroup>
+                <AvGroup>
                   <Label id="updatedByLabel" for="updatedBy">
                     Updated By
                   </Label>

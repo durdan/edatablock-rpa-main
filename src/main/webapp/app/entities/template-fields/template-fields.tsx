@@ -92,6 +92,12 @@ export class TemplateFields extends React.Component<ITemplateFieldsProps, ITempl
                 <th className="hand" onClick={this.sort('isTemplateIdentifier')}>
                   Is Template Identifier <FontAwesomeIcon icon="sort" />
                 </th>
+                <th className="hand" onClick={this.sort('isLabel')}>
+                  Is Label <FontAwesomeIcon icon="sort" />
+                </th>
+                <th className="hand" onClick={this.sort('pageNumebr')}>
+                  Page Numebr <FontAwesomeIcon icon="sort" />
+                </th>
                 <th className="hand" onClick={this.sort('fieldValidationRequire')}>
                   Field Validation Require <FontAwesomeIcon icon="sort" />
                 </th>
@@ -121,6 +127,8 @@ export class TemplateFields extends React.Component<ITemplateFieldsProps, ITempl
                   <td>{templateFields.height}</td>
                   <td>{templateFields.sequence}</td>
                   <td>{templateFields.isTemplateIdentifier}</td>
+                  <td>{templateFields.isLabel}</td>
+                  <td>{templateFields.pageNumebr}</td>
                   <td>{templateFields.fieldValidationRequire}</td>
                   <td>{templateFields.fieldValidationRule}</td>
                   <td>

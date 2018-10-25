@@ -11,6 +11,7 @@ export interface IClient {
   createDate?: Moment;
   createdBy?: string;
   updateDate?: Moment;
+  isMergedDocument?: number;
   updatedBy?: string;
   orgNameOrgName?: string;
   orgNameId?: number;

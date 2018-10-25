@@ -184,6 +184,18 @@ export class TemplateFieldsUpdate extends React.Component<ITemplateFieldsUpdateP
                   <AvField id="template-fields-isTemplateIdentifier" type="string" className="form-control" name="isTemplateIdentifier" />
                 </AvGroup>
                 <AvGroup>
+                  <Label id="isLabelLabel" for="isLabel">
+                    Is Label
+                  </Label>
+                  <AvField id="template-fields-isLabel" type="string" className="form-control" name="isLabel" />
+                </AvGroup>
+                <AvGroup>
+                  <Label id="pageNumebrLabel" for="pageNumebr">
+                    Page Numebr
+                  </Label>
+                  <AvField id="template-fields-pageNumebr" type="string" className="form-control" name="pageNumebr" />
+                </AvGroup>
+                <AvGroup>
                   <Label id="fieldValidationRequireLabel" for="fieldValidationRequire">
                     Field Validation Require
                   </Label>

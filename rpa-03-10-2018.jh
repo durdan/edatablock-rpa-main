@@ -33,6 +33,7 @@ entity Client{
       createDate Instant,
       createdBy String,
       updateDate Instant,
+      isMergedDocument Integer,
       updatedBy String
 }
 
@@ -50,6 +51,7 @@ entity InputTemplate {
     createdBy String,
     updateDate Instant,
     templateIdentifier String,//regex string
+    numberOfPages Integer,
     updatedBy String
 }
 
@@ -74,6 +76,8 @@ entity TemplateFields {
       height Double,
       sequence Integer,
       isTemplateIdentifier Integer,
+      isLabel Integer ,
+      pageNumebr Integer,
       fieldValidationRequire Integer,
       fieldValidationRule String //Regex expression
 }
@@ -175,6 +179,7 @@ entity FileToFtp {
     EmailMessages{client(clientEmailAddress)} to Client
     UploadFiles{client(clientName)} to Client
     ClientDataOcr to Transaction
+    TemplateRules{client(clientName)} to Client
     FileToFtp{clientDataOcr(clientEmailAddress)} to ClientDataOcr
     //Ticket{assignedTo(login)} to User{ticket}
 }

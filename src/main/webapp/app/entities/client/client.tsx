@@ -89,6 +89,9 @@ export class Client extends React.Component<IClientProps, IClientState> {
                 <th className="hand" onClick={this.sort('updateDate')}>
                   Update Date <FontAwesomeIcon icon="sort" />
                 </th>
+                <th className="hand" onClick={this.sort('isMergedDocument')}>
+                  Is Merged Document <FontAwesomeIcon icon="sort" />
+                </th>
                 <th className="hand" onClick={this.sort('updatedBy')}>
                   Updated By <FontAwesomeIcon icon="sort" />
                 </th>
@@ -118,6 +121,7 @@ export class Client extends React.Component<IClientProps, IClientState> {
                   <td>
                     <TextFormat type="date" value={client.updateDate} format={APP_DATE_FORMAT} />
                   </td>
+                  <td>{client.isMergedDocument}</td>
                   <td>{client.updatedBy}</td>
                   <td>{client.orgNameOrgName ? <Link to={`organization/${client.orgNameId}`}>{client.orgNameOrgName}</Link> : ''}</td>
                   <td className="text-right">

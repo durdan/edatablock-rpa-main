@@ -14,5 +14,11 @@
                                  referencedColumnNames="id"
                                  referencedTableName="input_template"/>
 
+        <addForeignKeyConstraint baseColumnNames="client_id"
+                                 baseTableName="template_rules"
+                                 constraintName="fk_template_rules_client_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="client"/>
+
     </changeSet>
 </databaseChangeLog>

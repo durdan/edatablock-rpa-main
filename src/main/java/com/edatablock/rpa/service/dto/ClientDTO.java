@@ -30,6 +30,8 @@ public class ClientDTO implements Serializable {
 
     private Instant updateDate;
 
+    private Integer isMergedDocument;
+
     private String updatedBy;
 
     private Long orgNameId;
@@ -108,6 +110,14 @@ public class ClientDTO implements Serializable {
         this.updateDate = updateDate;
     }
 
+    public Integer getIsMergedDocument() {
+        return isMergedDocument;
+    }
+
+    public void setIsMergedDocument(Integer isMergedDocument) {
+        this.isMergedDocument = isMergedDocument;
+    }
+
     public String getUpdatedBy() {
         return updatedBy;
     }
@@ -165,6 +175,7 @@ public class ClientDTO implements Serializable {
             ", createDate='" + getCreateDate() + "'" +
             ", createdBy='" + getCreatedBy() + "'" +
             ", updateDate='" + getUpdateDate() + "'" +
+            ", isMergedDocument=" + getIsMergedDocument() +
             ", updatedBy='" + getUpdatedBy() + "'" +
             ", orgName=" + getOrgNameId() +
             ", orgName='" + getOrgNameOrgName() + "'" +

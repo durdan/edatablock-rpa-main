@@ -53,6 +53,14 @@
             "fieldType": "Integer"
         },
         {
+            "fieldName": "isLabel",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "pageNumebr",
+            "fieldType": "Integer"
+        },
+        {
             "fieldName": "fieldValidationRequire",
             "fieldType": "Integer"
         },

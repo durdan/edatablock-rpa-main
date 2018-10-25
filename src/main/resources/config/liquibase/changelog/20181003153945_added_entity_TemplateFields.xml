@@ -58,6 +58,14 @@
                 <constraints nullable="true" />
             </column>
 
+            <column name="is_label" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="page_numebr" type="integer">
+                <constraints nullable="true" />
+            </column>
+
             <column name="field_validation_require" type="integer">
                 <constraints nullable="true" />
             </column>

@@ -9,6 +9,7 @@ export interface IInputTemplate {
   createdBy?: string;
   updateDate?: Moment;
   templateIdentifier?: string;
+  numberOfPages?: number;
   updatedBy?: string;
   clientClientName?: string;
   clientId?: number;

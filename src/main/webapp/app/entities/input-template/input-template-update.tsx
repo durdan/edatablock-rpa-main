@@ -151,6 +151,12 @@ export class InputTemplateUpdate extends React.Component<IInputTemplateUpdatePro
                   <AvField id="input-template-templateIdentifier" type="text" name="templateIdentifier" />
                 </AvGroup>
                 <AvGroup>
+                  <Label id="numberOfPagesLabel" for="numberOfPages">
+                    Number Of Pages
+                  </Label>
+                  <AvField id="input-template-numberOfPages" type="string" className="form-control" name="numberOfPages" />
+                </AvGroup>
+                <AvGroup>
                   <Label id="updatedByLabel" for="updatedBy">
                     Updated By
                   </Label>

@@ -65,6 +65,9 @@ public class InputTemplateResourceIntTest {
     private static final String DEFAULT_TEMPLATE_IDENTIFIER = "AAAAAAAAAA";
     private static final String UPDATED_TEMPLATE_IDENTIFIER = "BBBBBBBBBB";
 
+    private static final Integer DEFAULT_NUMBER_OF_PAGES = 1;
+    private static final Integer UPDATED_NUMBER_OF_PAGES = 2;
+
     private static final String DEFAULT_UPDATED_BY = "AAAAAAAAAA";
     private static final String UPDATED_UPDATED_BY = "BBBBBBBBBB";
 
@@ -119,6 +122,7 @@ public class InputTemplateResourceIntTest {
             .createdBy(DEFAULT_CREATED_BY)
             .updateDate(DEFAULT_UPDATE_DATE)
             .templateIdentifier(DEFAULT_TEMPLATE_IDENTIFIER)
+            .numberOfPages(DEFAULT_NUMBER_OF_PAGES)
             .updatedBy(DEFAULT_UPDATED_BY);
         return inputTemplate;
     }
@@ -151,6 +155,7 @@ public class InputTemplateResourceIntTest {
         assertThat(testInputTemplate.getCreatedBy()).isEqualTo(DEFAULT_CREATED_BY);
         assertThat(testInputTemplate.getUpdateDate()).isEqualTo(DEFAULT_UPDATE_DATE);
         assertThat(testInputTemplate.getTemplateIdentifier()).isEqualTo(DEFAULT_TEMPLATE_IDENTIFIER);
+        assertThat(testInputTemplate.getNumberOfPages()).isEqualTo(DEFAULT_NUMBER_OF_PAGES);
         assertThat(testInputTemplate.getUpdatedBy()).isEqualTo(DEFAULT_UPDATED_BY);
     }
 
@@ -211,6 +216,7 @@ public class InputTemplateResourceIntTest {
             .andExpect(jsonPath("$.[*].createdBy").value(hasItem(DEFAULT_CREATED_BY.toString())))
             .andExpect(jsonPath("$.[*].updateDate").value(hasItem(DEFAULT_UPDATE_DATE.toString())))
             .andExpect(jsonPath("$.[*].templateIdentifier").value(hasItem(DEFAULT_TEMPLATE_IDENTIFIER.toString())))
+            .andExpect(jsonPath("$.[*].numberOfPages").value(hasItem(DEFAULT_NUMBER_OF_PAGES)))
             .andExpect(jsonPath("$.[*].updatedBy").value(hasItem(DEFAULT_UPDATED_BY.toString())));
     }
     
@@ -232,6 +238,7 @@ public class InputTemplateResourceIntTest {
             .andExpect(jsonPath("$.createdBy").value(DEFAULT_CREATED_BY.toString()))
             .andExpect(jsonPath("$.updateDate").value(DEFAULT_UPDATE_DATE.toString()))
             .andExpect(jsonPath("$.templateIdentifier").value(DEFAULT_TEMPLATE_IDENTIFIER.toString()))
+            .andExpect(jsonPath("$.numberOfPages").value(DEFAULT_NUMBER_OF_PAGES))
             .andExpect(jsonPath("$.updatedBy").value(DEFAULT_UPDATED_BY.toString()));
     }
 
@@ -263,6 +270,7 @@ public class InputTemplateResourceIntTest {
             .createdBy(UPDATED_CREATED_BY)
             .updateDate(UPDATED_UPDATE_DATE)
             .templateIdentifier(UPDATED_TEMPLATE_IDENTIFIER)
+            .numberOfPages(UPDATED_NUMBER_OF_PAGES)
             .updatedBy(UPDATED_UPDATED_BY);
         InputTemplateDTO inputTemplateDTO = inputTemplateMapper.toDto(updatedInputTemplate);
 
@@ -282,6 +290,7 @@ public class InputTemplateResourceIntTest {
         assertThat(testInputTemplate.getCreatedBy()).isEqualTo(UPDATED_CREATED_BY);
         assertThat(testInputTemplate.getUpdateDate()).isEqualTo(UPDATED_UPDATE_DATE);
         assertThat(testInputTemplate.getTemplateIdentifier()).isEqualTo(UPDATED_TEMPLATE_IDENTIFIER);
+        assertThat(testInputTemplate.getNumberOfPages()).isEqualTo(UPDATED_NUMBER_OF_PAGES);
         assertThat(testInputTemplate.getUpdatedBy()).isEqualTo(UPDATED_UPDATED_BY);
     }
 

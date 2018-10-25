@@ -26,6 +26,10 @@ public class TemplateRulesDTO implements Serializable {
 
     private String inputTemplateTemplateName;
 
+    private Long clientId;
+
+    private String clientClientName;
+
     public Long getId() {
         return id;
     }
@@ -98,6 +102,22 @@ public class TemplateRulesDTO implements Serializable {
         this.inputTemplateTemplateName = inputTemplateTemplateName;
     }
 
+    public Long getClientId() {
+        return clientId;
+    }
+
+    public void setClientId(Long clientId) {
+        this.clientId = clientId;
+    }
+
+    public String getClientClientName() {
+        return clientClientName;
+    }
+
+    public void setClientClientName(String clientClientName) {
+        this.clientClientName = clientClientName;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -131,6 +151,8 @@ public class TemplateRulesDTO implements Serializable {
             ", description='" + getDescription() + "'" +
             ", inputTemplate=" + getInputTemplateId() +
             ", inputTemplate='" + getInputTemplateTemplateName() + "'" +
+            ", client=" + getClientId() +
+            ", client='" + getClientClientName() + "'" +
             "}";
     }
 }

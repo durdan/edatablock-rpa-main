@@ -33,6 +33,10 @@
             "fieldType": "String"
         },
         {
+            "fieldName": "numberOfPages",
+            "fieldType": "Integer"
+        },
+        {
             "fieldName": "updatedBy",
             "fieldType": "String"
         }

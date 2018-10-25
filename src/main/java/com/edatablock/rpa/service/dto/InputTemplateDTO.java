@@ -27,6 +27,8 @@ public class InputTemplateDTO implements Serializable {
 
     private String templateIdentifier;
 
+    private Integer numberOfPages;
+
     private String updatedBy;
 
     private Long clientId;
@@ -97,6 +99,14 @@ public class InputTemplateDTO implements Serializable {
         this.templateIdentifier = templateIdentifier;
     }
 
+    public Integer getNumberOfPages() {
+        return numberOfPages;
+    }
+
+    public void setNumberOfPages(Integer numberOfPages) {
+        this.numberOfPages = numberOfPages;
+    }
+
     public String getUpdatedBy() {
         return updatedBy;
     }
@@ -153,6 +163,7 @@ public class InputTemplateDTO implements Serializable {
             ", createdBy='" + getCreatedBy() + "'" +
             ", updateDate='" + getUpdateDate() + "'" +
             ", templateIdentifier='" + getTemplateIdentifier() + "'" +
+            ", numberOfPages=" + getNumberOfPages() +
             ", updatedBy='" + getUpdatedBy() + "'" +
             ", client=" + getClientId() +
             ", client='" + getClientClientName() + "'" +

@@ -65,6 +65,14 @@ export class TemplateFieldsDetail extends React.Component<ITemplateFieldsDetailP
             </dt>
             <dd>{templateFieldsEntity.isTemplateIdentifier}</dd>
             <dt>
+              <span id="isLabel">Is Label</span>
+            </dt>
+            <dd>{templateFieldsEntity.isLabel}</dd>
+            <dt>
+              <span id="pageNumebr">Page Numebr</span>
+            </dt>
+            <dd>{templateFieldsEntity.pageNumebr}</dd>
+            <dt>
               <span id="fieldValidationRequire">Field Validation Require</span>
             </dt>
             <dd>{templateFieldsEntity.fieldValidationRequire}</dd>

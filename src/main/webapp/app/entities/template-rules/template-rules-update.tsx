@@ -10,6 +10,8 @@ import { IRootState } from 'app/shared/reducers';
 
 import { IInputTemplate } from 'app/shared/model/input-template.model';
 import { getEntities as getInputTemplates } from 'app/entities/input-template/input-template.reducer';
+import { IClient } from 'app/shared/model/client.model';
+import { getEntities as getClients } from 'app/entities/client/client.reducer';
 import { getEntity, updateEntity, createEntity, reset } from './template-rules.reducer';
 import { ITemplateRules } from 'app/shared/model/template-rules.model';
 // tslint:disable-next-line:no-unused-variable
@@ -21,6 +23,7 @@ export interface ITemplateRulesUpdateProps extends StateProps, DispatchProps, Ro
 export interface ITemplateRulesUpdateState {
   isNew: boolean;
   inputTemplateId: string;
+  clientId: string;
 }
 
 export class TemplateRulesUpdate extends React.Component<ITemplateRulesUpdateProps, ITemplateRulesUpdateState> {
@@ -28,6 +31,7 @@ export class TemplateRulesUpdate extends React.Component<ITemplateRulesUpdatePro
     super(props);
     this.state = {
       inputTemplateId: '0',
+      clientId: '0',
       isNew: !this.props.match.params || !this.props.match.params.id
     };
   }
@@ -40,6 +44,7 @@ export class TemplateRulesUpdate extends React.Component<ITemplateRulesUpdatePro
     }
 
     this.props.getInputTemplates();
+    this.props.getClients();
   }
 
   saveEntity = (event, errors, values) => {
@@ -64,7 +69,7 @@ export class TemplateRulesUpdate extends React.Component<ITemplateRulesUpdatePro
   };
 
   render() {
-    const { templateRulesEntity, inputTemplates, loading, updating } = this.props;
+    const { templateRulesEntity, inputTemplates, clients, loading, updating } = this.props;
     const { isNew } = this.state;
 
     return (
@@ -135,6 +140,19 @@ export class TemplateRulesUpdate extends React.Component<ITemplateRulesUpdatePro
                       : null}
                   </AvInput>
                 </AvGroup>
+                <AvGroup>
+                  <Label for="client.clientName">Client</Label>
+                  <AvInput id="template-rules-client" type="select" className="form-control" name="clientId">
+                    <option value="" key="0" />
+                    {clients
+                      ? clients.map(otherEntity => (
+                          <option value={otherEntity.id} key={otherEntity.id}>
+                            {otherEntity.clientName}
+                          </option>
+                        ))
+                      : null}
+                  </AvInput>
+                </AvGroup>
                 <Button tag={Link} id="cancel-save" to="/entity/template-rules" replace color="info">
                   <FontAwesomeIcon icon="arrow-left" />&nbsp;
                   <span className="d-none d-md-inline">Back</span>
@@ -154,6 +172,7 @@ export class TemplateRulesUpdate extends React.Component<ITemplateRulesUpdatePro
 
 const mapStateToProps = (storeState: IRootState) => ({
   inputTemplates: storeState.inputTemplate.entities,
+  clients: storeState.client.entities,
   templateRulesEntity: storeState.templateRules.entity,
   loading: storeState.templateRules.loading,
   updating: storeState.templateRules.updating
@@ -161,6 +180,7 @@ const mapStateToProps = (storeState: IRootState) => ({
 
 const mapDispatchToProps = {
   getInputTemplates,
+  getClients,
   getEntity,
   updateEntity,
   createEntity,

@@ -1,5 +1,6 @@
 package com.edatablock.rpa.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
@@ -43,6 +44,10 @@ public class TemplateRules implements Serializable {
     @OneToOne
     @JoinColumn(unique = true)
     private InputTemplate inputTemplate;
+
+    @ManyToOne
+    @JsonIgnoreProperties("")
+    private Client client;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Long getId() {
@@ -142,6 +147,19 @@ public class TemplateRules implements Serializable {
 
     public void setInputTemplate(InputTemplate inputTemplate) {
         this.inputTemplate = inputTemplate;
+    }
+
+    public Client getClient() {
+        return client;
+    }
+
+    public TemplateRules client(Client client) {
+        this.client = client;
+        return this;
+    }
+
+    public void setClient(Client client) {
+        this.client = client;
     }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 

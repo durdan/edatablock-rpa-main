@@ -8,6 +8,8 @@ export interface ITemplateRules {
   description?: string;
   inputTemplateTemplateName?: string;
   inputTemplateId?: number;
+  clientClientName?: string;
+  clientId?: number;
 }
 
 export const defaultValue: Readonly<ITemplateRules> = {};

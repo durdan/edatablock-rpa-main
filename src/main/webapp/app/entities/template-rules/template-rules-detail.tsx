@@ -54,6 +54,8 @@ export class TemplateRulesDetail extends React.Component<ITemplateRulesDetailPro
             <dd>{templateRulesEntity.description}</dd>
             <dt>Input Template</dt>
             <dd>{templateRulesEntity.inputTemplateTemplateName ? templateRulesEntity.inputTemplateTemplateName : ''}</dd>
+            <dt>Client</dt>
+            <dd>{templateRulesEntity.clientClientName ? templateRulesEntity.clientClientName : ''}</dd>
           </dl>
           <Button tag={Link} to="/entity/template-rules" replace color="info">
             <FontAwesomeIcon icon="arrow-left" /> <span className="d-none d-md-inline">Back</span>

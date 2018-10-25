@@ -69,6 +69,12 @@ public class TemplateFieldsResourceIntTest {
     private static final Integer DEFAULT_IS_TEMPLATE_IDENTIFIER = 1;
     private static final Integer UPDATED_IS_TEMPLATE_IDENTIFIER = 2;
 
+    private static final Integer DEFAULT_IS_LABEL = 1;
+    private static final Integer UPDATED_IS_LABEL = 2;
+
+    private static final Integer DEFAULT_PAGE_NUMEBR = 1;
+    private static final Integer UPDATED_PAGE_NUMEBR = 2;
+
     private static final Integer DEFAULT_FIELD_VALIDATION_REQUIRE = 1;
     private static final Integer UPDATED_FIELD_VALIDATION_REQUIRE = 2;
 
@@ -128,6 +134,8 @@ public class TemplateFieldsResourceIntTest {
             .height(DEFAULT_HEIGHT)
             .sequence(DEFAULT_SEQUENCE)
             .isTemplateIdentifier(DEFAULT_IS_TEMPLATE_IDENTIFIER)
+            .isLabel(DEFAULT_IS_LABEL)
+            .pageNumebr(DEFAULT_PAGE_NUMEBR)
             .fieldValidationRequire(DEFAULT_FIELD_VALIDATION_REQUIRE)
             .fieldValidationRule(DEFAULT_FIELD_VALIDATION_RULE);
         return templateFields;
@@ -163,6 +171,8 @@ public class TemplateFieldsResourceIntTest {
         assertThat(testTemplateFields.getHeight()).isEqualTo(DEFAULT_HEIGHT);
         assertThat(testTemplateFields.getSequence()).isEqualTo(DEFAULT_SEQUENCE);
         assertThat(testTemplateFields.getIsTemplateIdentifier()).isEqualTo(DEFAULT_IS_TEMPLATE_IDENTIFIER);
+        assertThat(testTemplateFields.getIsLabel()).isEqualTo(DEFAULT_IS_LABEL);
+        assertThat(testTemplateFields.getPageNumebr()).isEqualTo(DEFAULT_PAGE_NUMEBR);
         assertThat(testTemplateFields.getFieldValidationRequire()).isEqualTo(DEFAULT_FIELD_VALIDATION_REQUIRE);
         assertThat(testTemplateFields.getFieldValidationRule()).isEqualTo(DEFAULT_FIELD_VALIDATION_RULE);
     }
@@ -302,6 +312,8 @@ public class TemplateFieldsResourceIntTest {
             .andExpect(jsonPath("$.[*].height").value(hasItem(DEFAULT_HEIGHT.doubleValue())))
             .andExpect(jsonPath("$.[*].sequence").value(hasItem(DEFAULT_SEQUENCE)))
             .andExpect(jsonPath("$.[*].isTemplateIdentifier").value(hasItem(DEFAULT_IS_TEMPLATE_IDENTIFIER)))
+            .andExpect(jsonPath("$.[*].isLabel").value(hasItem(DEFAULT_IS_LABEL)))
+            .andExpect(jsonPath("$.[*].pageNumebr").value(hasItem(DEFAULT_PAGE_NUMEBR)))
             .andExpect(jsonPath("$.[*].fieldValidationRequire").value(hasItem(DEFAULT_FIELD_VALIDATION_REQUIRE)))
             .andExpect(jsonPath("$.[*].fieldValidationRule").value(hasItem(DEFAULT_FIELD_VALIDATION_RULE.toString())));
     }
@@ -326,6 +338,8 @@ public class TemplateFieldsResourceIntTest {
             .andExpect(jsonPath("$.height").value(DEFAULT_HEIGHT.doubleValue()))
             .andExpect(jsonPath("$.sequence").value(DEFAULT_SEQUENCE))
             .andExpect(jsonPath("$.isTemplateIdentifier").value(DEFAULT_IS_TEMPLATE_IDENTIFIER))
+            .andExpect(jsonPath("$.isLabel").value(DEFAULT_IS_LABEL))
+            .andExpect(jsonPath("$.pageNumebr").value(DEFAULT_PAGE_NUMEBR))
             .andExpect(jsonPath("$.fieldValidationRequire").value(DEFAULT_FIELD_VALIDATION_REQUIRE))
             .andExpect(jsonPath("$.fieldValidationRule").value(DEFAULT_FIELD_VALIDATION_RULE.toString()));
     }
@@ -360,6 +374,8 @@ public class TemplateFieldsResourceIntTest {
             .height(UPDATED_HEIGHT)
             .sequence(UPDATED_SEQUENCE)
             .isTemplateIdentifier(UPDATED_IS_TEMPLATE_IDENTIFIER)
+            .isLabel(UPDATED_IS_LABEL)
+            .pageNumebr(UPDATED_PAGE_NUMEBR)
             .fieldValidationRequire(UPDATED_FIELD_VALIDATION_REQUIRE)
             .fieldValidationRule(UPDATED_FIELD_VALIDATION_RULE);
         TemplateFieldsDTO templateFieldsDTO = templateFieldsMapper.toDto(updatedTemplateFields);
@@ -382,6 +398,8 @@ public class TemplateFieldsResourceIntTest {
         assertThat(testTemplateFields.getHeight()).isEqualTo(UPDATED_HEIGHT);
         assertThat(testTemplateFields.getSequence()).isEqualTo(UPDATED_SEQUENCE);
         assertThat(testTemplateFields.getIsTemplateIdentifier()).isEqualTo(UPDATED_IS_TEMPLATE_IDENTIFIER);
+        assertThat(testTemplateFields.getIsLabel()).isEqualTo(UPDATED_IS_LABEL);
+        assertThat(testTemplateFields.getPageNumebr()).isEqualTo(UPDATED_PAGE_NUMEBR);
         assertThat(testTemplateFields.getFieldValidationRequire()).isEqualTo(UPDATED_FIELD_VALIDATION_REQUIRE);
         assertThat(testTemplateFields.getFieldValidationRule()).isEqualTo(UPDATED_FIELD_VALIDATION_RULE);
     }

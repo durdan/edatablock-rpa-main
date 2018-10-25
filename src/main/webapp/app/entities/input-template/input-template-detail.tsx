@@ -61,6 +61,10 @@ export class InputTemplateDetail extends React.Component<IInputTemplateDetailPro
             </dt>
             <dd>{inputTemplateEntity.templateIdentifier}</dd>
             <dt>
+              <span id="numberOfPages">Number Of Pages</span>
+            </dt>
+            <dd>{inputTemplateEntity.numberOfPages}</dd>
+            <dt>
               <span id="updatedBy">Updated By</span>
             </dt>
             <dd>{inputTemplateEntity.updatedBy}</dd>
